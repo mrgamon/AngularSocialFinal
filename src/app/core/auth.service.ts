@@ -61,7 +61,7 @@ export class AuthService {
   private oAuthLogin(provider: firebase.auth.AuthProvider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
-        this.notify.update('Welcome to Firestarter!!!', 'success');
+        this.notify.update('Welcome to Angular Social!!!', 'success');
         return this.updateUserData(credential.user);
       })
       .catch((error) => this.handleError(error) );
